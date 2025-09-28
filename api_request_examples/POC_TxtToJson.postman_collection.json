@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "47c5afd1-b122-44a5-bd21-2145795e5e4b",
+		"name": "POC_TxtToJson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48798790",
+		"_collection_link": "https://deboramlmaciel-3140983.postman.co/workspace/D%C3%A9bora-Maciel's-Workspace~3a7d8c69-11fa-4227-87d5-f04bed80ce41/collection/48798790-47c5afd1-b122-44a5-bd21-2145795e5e4b?action=share&source=collection_link&creator=48798790"
+	},
+	"item": [
+		{
+			"name": "processFileAllRecords",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Projetos/POC_TxtToJson/files_example/data_1.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/processFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"processFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProcessFileById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Projetos/POC_TxtToJson/files_example/data_1.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/processFile?orderId=123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"processFile"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProcessFileByDataCompra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Projetos/POC_TxtToJson/files_example/data_1.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/processFile?beginDate=2021-03-25&finalDate=2021-03-25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"processFile"
+					],
+					"query": [
+						{
+							"key": "beginDate",
+							"value": "2021-03-25"
+						},
+						{
+							"key": "finalDate",
+							"value": "2021-03-25"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
